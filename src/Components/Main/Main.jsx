@@ -8,7 +8,7 @@ import ISS from '../ISS/ISS'
 const Main = () => {
   return (
     <Switch>
-      <Route path="/" component={Home} exact />
+      <Route path="/domingos-aburridos" component={Home} exact />
       <Route path="/barcelona" component={Barcelona} />
       <Route path="/iss" component={ISS} />
     </Switch>

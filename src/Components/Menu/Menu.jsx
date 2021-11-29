@@ -20,7 +20,7 @@ const Menu = () => {
       isOpen={menuOpenState}
       onStateChange={(state) => handleStateChange(state)}
     >
-      <Link onClick={() => closeMenu()} className="menu-item" to="/">
+      <Link onClick={() => closeMenu()} className="menu-item" to="/domingos-aburridos">
         Aeropuertos - Deckgl
       </Link>
       <Link onClick={() => closeMenu()} className="menu-item" to="/barcelona">
