@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/domingos-aburridos/static/css/main.b35a56d3.chunk.css",
+    "main.js": "/domingos-aburridos/static/js/main.54bea87a.chunk.js",
+    "main.js.map": "/domingos-aburridos/static/js/main.54bea87a.chunk.js.map",
+    "runtime-main.js": "/domingos-aburridos/static/js/runtime-main.d9f7b4ff.js",
+    "runtime-main.js.map": "/domingos-aburridos/static/js/runtime-main.d9f7b4ff.js.map",
+    "static/css/2.b0d5651f.chunk.css": "/domingos-aburridos/static/css/2.b0d5651f.chunk.css",
+    "static/js/2.39c09922.chunk.js": "/domingos-aburridos/static/js/2.39c09922.chunk.js",
+    "static/js/2.39c09922.chunk.js.map": "/domingos-aburridos/static/js/2.39c09922.chunk.js.map",
+    "static/js/3.ee679bfa.chunk.js": "/domingos-aburridos/static/js/3.ee679bfa.chunk.js",
+    "static/js/3.ee679bfa.chunk.js.map": "/domingos-aburridos/static/js/3.ee679bfa.chunk.js.map",
+    "index.html": "/domingos-aburridos/index.html",
+    "static/css/2.b0d5651f.chunk.css.map": "/domingos-aburridos/static/css/2.b0d5651f.chunk.css.map",
+    "static/css/main.b35a56d3.chunk.css.map": "/domingos-aburridos/static/css/main.b35a56d3.chunk.css.map",
+    "static/js/2.39c09922.chunk.js.LICENSE.txt": "/domingos-aburridos/static/js/2.39c09922.chunk.js.LICENSE.txt",
+    "static/media/logo.6d3ac2f1.png": "/domingos-aburridos/static/media/logo.6d3ac2f1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9f7b4ff.js",
+    "static/css/2.b0d5651f.chunk.css",
+    "static/js/2.39c09922.chunk.js",
+    "static/css/main.b35a56d3.chunk.css",
+    "static/js/main.54bea87a.chunk.js"
+  ]
+}
