@@ -9,8 +9,8 @@ const Main = () => {
   return (
     <Switch>
       <Route path="/" component={Home} exact />
-      <Route path="/barcelona" component={Barcelona} exact />
-      <Route path="/iss" component={ISS} exact />
+      <Route path="/barcelona" component={Barcelona} />
+      <Route path="/iss" component={ISS} />
     </Switch>
   );
 };

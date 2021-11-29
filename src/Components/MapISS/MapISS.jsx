@@ -1,10 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import axios from "axios";
 
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import { Toast } from "../../hooks/useToast";
+import { titleContext } from "../../Contexts/titleContext";
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
@@ -12,6 +15,9 @@ const MapISS = () => {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [zoom] = useState(2);
+  const { title, setTitle } = useContext(titleContext);
+
+  setTitle("Estación Espacial Internacional");
 
   useEffect(() => {
     if (map.current) return;
@@ -24,6 +30,7 @@ const MapISS = () => {
   });
 
   useEffect(() => {
+    let updateSource;
     map.current.on("load", async () => {
       const geojson = await getLocation();
       map.current.addSource("iss", {
@@ -54,7 +61,7 @@ const MapISS = () => {
         map.current.getCanvas().style.cursor = "";
       });
 
-      const updateSource = setInterval(async () => {
+      updateSource = setInterval(async () => {
         const geojson = await getLocation(updateSource);
         map.current.getSource("iss").setData(geojson);
       }, 2000);
@@ -102,6 +109,9 @@ const MapISS = () => {
         }
       }
     });
+    return(() => {
+      clearInterval(updateSource)
+    })
   }, []);
 
   return (

@@ -21,7 +21,7 @@ const Menu = () => {
       onStateChange={(state) => handleStateChange(state)}
     >
       <Link onClick={() => closeMenu()} className="menu-item" to="/">
-        Autobuses Cáceres - Mapbox
+        Aeropuertos - Deckgl
       </Link>
       <Link onClick={() => closeMenu()} className="menu-item" to="/barcelona">
         Metro Barcelona - Leaflet

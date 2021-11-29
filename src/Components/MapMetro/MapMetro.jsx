@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 
 import {
@@ -10,12 +10,16 @@ import {
   GeoJSON,
 } from "react-leaflet";
 import L from "leaflet";
+import { titleContext } from "../../Contexts/titleContext";
 
 const MapMetro = () => {
   const APP_ID = process.env.REACT_APP_TMB_ID;
   const APP_KEY = process.env.REACT_APP_TMB_KEY;
   const [lines, setLines] = useState([]);
   const [stations, setStations] = useState([]);
+  const { setTitle } = useContext(titleContext);
+
+  setTitle("Metro Barcelona");
 
   const stationIcon = L.icon({
     iconUrl:
